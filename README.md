@@ -26,6 +26,7 @@ kind: PersistentVolumeClaim
 <snip>
 ```
 That's it.
+
 You can read more about OpenShift Container Storage here:
 https://www.redhat.com/en/resources/openshift-container-storage-4-datasheet
 
@@ -35,4 +36,4 @@ If you are a cluster admin you can install this template to reside in the cluste
 
 (Doing the above will just remove the need to use this github repo. Future deployments can just come straight from the cluster console or with `oc new-app --template=`).
 
-[1] https://www.openshift.com/blog/openshift-container-storage-4-introduction-to-ceph
+[1]: https://www.openshift.com/blog/openshift-container-storage-4-introduction-to-ceph
