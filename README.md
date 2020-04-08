@@ -28,10 +28,12 @@ kind: PersistentVolumeClaim
 That's it.
 
 You can read more about OpenShift Container Storage here:
+
 https://www.redhat.com/en/resources/openshift-container-storage-4-datasheet
 
 ## Installing this as a template
 If you are a cluster admin you can install this template to reside in the cluster (vs. git cloned and run locally) with:
+
 `oc create -n openshift -f mongodb-ocs-persistent.yaml`
 
 (Doing the above will just remove the need to use this github repo. Future deployments can just come straight from the cluster console or with `oc new-app --template=`).
