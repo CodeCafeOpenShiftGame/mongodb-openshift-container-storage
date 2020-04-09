@@ -71,11 +71,11 @@ objects:
   kind: PersistentVolumeClaim
   metadata:
     annotations:
-      volume.beta.kubernetes.io/storage-class: ocs-storagecluster-cephfs
+      volume.beta.kubernetes.io/storage-class: ocs-storagecluster-ceph-rbd
     name: ${DATABASE_SERVICE_NAME}
   spec:
     accessModes:
-    - ReadWriteMany
+    - ReadWriteOnce
     resources:
       requests:
         storage: ${VOLUME_CAPACITY}
