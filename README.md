@@ -10,6 +10,7 @@ oc process -f ./mongodb-ocs-persistent.yaml -l name=mongodb\
 -p MONGODB_PASSWORD=thisis4password \
 -p MONGODB_DATABASE=highscores \
 -p MONGODB_ADMIN_PASSWORD=thisis4password \
+-p DATABASE_SERVICE_NAME=mongodb-ocs \
 | oc create -f -
 ```
 
