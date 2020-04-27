@@ -14,14 +14,14 @@ oc process -f ./mongodb-ocs-persistent.yaml -l name=mongodb\
 ```
 
 ## How it works
-If you look at the template you will notices that the PersistentVolume defined uses an annotation to select the storage class for CephFS - 
+If you look at the template you will notices that the PersistentVolume defined uses an annotation to select one of the storage classes for OCS - 
 ```
 <snip>
 
 kind: PersistentVolumeClaim
   metadata:
     annotations:
-      volume.beta.kubernetes.io/storage-class: ocs-storagecluster-cephfs
+      volume.beta.kubernetes.io/storage-class: ocs-storagecluster-ceph-rbd
 
 <snip>
 ```
