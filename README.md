@@ -14,6 +14,17 @@ oc process -f ./mongodb-ocs-persistent.yaml -l name=mongodb\
 | oc create -f -
 ```
 
+if you don't have OCS/ODF installed you can use default storage instead:
+```
+oc process -f ./mongodb-template-generic.yaml -l name=mongodb \
+-p MONGODB_USER=thisisauser \
+-p MONGODB_PASSWORD=thisis4password \
+-p MONGODB_DATABASE=highscores \
+-p MONGODB_ADMIN_PASSWORD=thisis4password \
+-p DATABASE_SERVICE_NAME=mongodb-p \
+| oc create -f -
+```
+
 ## How it works
 If you look at the template you will notices that the PersistentVolume defined uses an annotation to select one of the storage classes for OCS - 
 ```
